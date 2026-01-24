@@ -9,7 +9,8 @@
 
     --color-grey: #222;
     --color-grey-alpha-80: rgb(from var(--color-grey) r g b / 0.8);
-    --font-heading: 'IM Fell English SC';
+    /* --font-heading: 'IM Fell English SC'; */
+    --font-heading: 'Jura';
     --nav-main-height: calc(var(--nav-main-item-height) + calc(var(--spacing)*4));
     --nav-main-item-height: 2em;
     --nav-main-width: 70vw;
@@ -192,7 +193,7 @@ video
     .has-animation-fade-out {
         animation-fill-mode: forwards;
         animation-name: fade-out;
-        animation-range-start: exit -20vh;
+        animation-range-start: exit -35vh;
         animation-range-end: cover 100%;
         animation-timeline: view();
         opacity: 1;
@@ -211,7 +212,7 @@ html {
 body {
     background: var(--color-bg);
     color: var(--color-fg);
-    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+    font-family: jura, caudex, cardo, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
     font-size: clamp(1rem, -0.875rem + 3vw, 1.25rem);
     line-height: 1.5;
 }
@@ -306,6 +307,7 @@ a {
     z-index: 1;
 
     & .logo {
+        display: flex;
         flex-shrink: 1;
         height: 2em;
         max-width: calc(100% - 5em);
@@ -393,7 +395,7 @@ a {
 /* Header */
 
 .logo {
-    filter: invert(1);
+    filter: invert(0);
 }
 
 /* Navigations */
@@ -477,19 +479,20 @@ a {
         left: 50%;
         max-width: 70vw;
         position: absolute;
-        top: 40%;
+        top: 60%;
         transform: translateX(-50%);
         width: 50em;
     }
 
     & .logo {
-        filter: drop-shadow(0px 0px 1.5em var(--color-fg)) drop-shadow(0px 0px 1.5em var(--color-fg)) invert(1);
+        /* filter: drop-shadow(0px 0px 1.5em var(--color-fg)) drop-shadow(0px 0px 1.5em var(--color-fg)) invert(0); */
     }
 }
 
 .image-hero {
     height: 100%;
     object-fit: cover;
+    object-position: 50% 20%;
     width: 100%;
 }
 
