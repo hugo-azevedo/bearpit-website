@@ -608,7 +608,7 @@ a {
     aspect-ratio: 16/9;
     display: grid;
     gap: var(--spacing);
-    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
 }
 
 /*** Media queries ***/
