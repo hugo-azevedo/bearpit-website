@@ -1,10 +1,11 @@
 /*** Variables ***/
+/* @import url('formspree.css'); */
 
 :root {
     --spacing: 0.5em;
     /* --color-accent: #ffb633; */
     --color-accent: #cf6520;
-    /* --color-accent: #07b8b1; */
+    --color-accent-secondary: #07b8b1;
     --color-bg: #121212;
     --transition-duration: 0.15s;
     --color-fg: #eee;
@@ -16,6 +17,8 @@
     --nav-main-height: calc(var(--nav-main-item-height) + calc(var(--spacing)*4));
     --nav-main-item-height: 2em;
     --nav-main-width: 70vw;
+    --font-family-body: "Montserrat", system-ui, sans-serif;
+
 }
 
 /*** Reset/Normalize ***/
@@ -289,6 +292,18 @@ a {
     transform: translateY(-5em);
 }
 
+.mb-1 {
+    margin-bottom: var(--spacing);
+}
+
+.mb-2 {
+    margin-bottom: calc(2*var(--spacing));
+}
+
+.mb-3 {
+    margin-bottom: calc(3*var(--spacing));
+}
+
 
 /*** Layout ***/
 
@@ -328,7 +343,8 @@ a {
     text-align: center;
 
     & .logo {
-        height: 1.5em;
+        height: 4.5em;
+        margin-bottom: 2em;
     }
 }
 
@@ -504,9 +520,7 @@ a {
     font-weight: normal !important;
 
     & .bit-date, .bit-vertical-date, .bit-mobile-date {
-        /* color: #e54f51; */
-        color: #07b8b1;
-        /* color: #07C4BB; */
+        color: var(--color-accent-secondary);
     }
 
     & .bit-upcoming-events .bit-vertical-date .bit-vertical-date-subsection:last-child {
@@ -633,7 +647,7 @@ a {
     position: relative;
     cursor: pointer;
     text-align: center;
-    background-color: #cf6520;
+    background-color: var(--color-accent);
     border: 1px solid rgba(74, 74, 74, 1);
     color: rgba(255, 255, 255, 1);
     border-radius: 2px;
@@ -654,7 +668,7 @@ a {
 }
 
 .highlight{
-    color: #07b8b1;
+    color: var(--color-accent-secondary);
     font-weight: bold;
 }
 
