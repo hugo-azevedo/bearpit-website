@@ -503,7 +503,7 @@ a {
 .container-shows {
     font-weight: normal !important;
 
-    & .bit-date, .bit-vertical-date {
+    & .bit-date, .bit-vertical-date, .bit-mobile-date {
         /* color: #e54f51; */
         color: #07b8b1;
         /* color: #07C4BB; */
@@ -517,12 +517,12 @@ a {
         font-weight: bold;
     }
 
-    & .bit-follow-section-wrapper {
+    /* & .bit-follow-section-wrapper {
         flex-direction: row !important;
         justify-content: right !important;
         padding: 0px !important;
         margin-bottom: -20px;
-    }
+    } */
 
     & .bit-follow-section-cta {
         margin: 0px 10px !important;
@@ -606,9 +606,56 @@ a {
 
 .container-video {
     aspect-ratio: 16/9;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     gap: var(--spacing);
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+}
+
+/* EPK */
+.container-epk{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+    justify-content: center;
+}
+
+.doc-wrapper{ 
+    margin: var(--spacing);
+}
+
+.download-button {
+    margin: var(--spacing) auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    background-color: #cf6520;
+    border: 1px solid rgba(74, 74, 74, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    border-width: 0px;
+    padding: 10px 20px;
+    width: fit-content;
+    font-size: 18px;
+    box-shadow: none;
+
+    &:hover {
+        opacity: .75;
+        color: white;
+    }
+}
+.download-icon {
+    margin-left: 10px;
+    fill: white;
+}
+
+.highlight{
+    color: #07b8b1;
+    font-weight: bold;
 }
 
 /*** Media queries ***/
