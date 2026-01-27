@@ -700,7 +700,7 @@ a {
         right: 0;
         top: 0;
         transform: translateX(100%);
-        transition: var(--transition-duration);
+        /* transition: var(--transition-duration); */
         z-index: 9;
 
         & a {
