@@ -710,8 +710,9 @@ a {
 
     .wrapper-nav-main.is-active {
         & .nav-main {
-            box-shadow: calc(-1*var(--nav-main-width)) 0 0 var(--color-grey-alpha-80);
+            box-shadow: none; /* Removed box shadow for testing */
             transform: translateX(0);
+            transition: none; /* Removed transition for testing */
         }
 
         & .icon-close {
