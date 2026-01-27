@@ -701,7 +701,7 @@ a {
         top: 0;
         transform: translateX(100%);
         transition: var(--transition-duration);
-        z-index: 100;
+        z-index: 9;
 
         & a {
             text-align: right;
