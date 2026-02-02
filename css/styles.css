@@ -632,6 +632,23 @@ a {
     flex-wrap: wrap;
     gap: var(--spacing);
     justify-content: center;
+
+    & .doc-wrapper {
+        max-width: 20em;
+
+        & img {
+            border-radius: 0.25em;
+            width: 100%;
+        }
+
+        & a {
+            display: block;
+        }
+
+        & iframe {
+            margin: var(--spacing) 0
+        }
+    }
 }
 
 .doc-wrapper{ 
