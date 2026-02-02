@@ -700,8 +700,7 @@ a {
         right: 0;
         top: 0;
         transform: translateX(100%);
-        /* transition: var(--transition-duration); */
-        z-index: 100;
+        transition: var(--transition-duration);
 
         & a {
             text-align: right;
@@ -711,9 +710,9 @@ a {
 
     .wrapper-nav-main.is-active {
         & .nav-main {
-            box-shadow: none; /* Removed box shadow for testing */
+            box-shadow: calc(-1*var(--nav-main-width)) 0 0 var(--color-grey-alpha-80);
             transform: translateX(0);
-            transition: none; /* Removed transition for testing */
+            transform: translateZ(0);
         }
 
         & .icon-close {
@@ -731,7 +730,8 @@ a {
         color: var(--color-fg);
         display: flex;
         padding: var(--spacing);
-        z-index: 101;
+        z-index: 10;
+        transform: translateZ(0);
 
         &:hover .icon-svg {
             color: var(--color-accent);
